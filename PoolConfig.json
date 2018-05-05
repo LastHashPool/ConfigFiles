@@ -32,9 +32,9 @@
         "postgres": {
             "host": "127.0.0.1",
             "port": 5432,
-            "user": "miningcore",
-            "password": "password",
-            "database": "miningcore"
+            "user": "USERNAME",
+            "password": "PASSWORD",
+            "database": "lasthash"
         }
     },
     "paymentProcessing": {
@@ -64,43 +64,79 @@
         "checkThreshold": 50
       },
       "ports": {
-        "3032": {
+        "10000": {
           "listenAddress": "0.0.0.0",
-          "difficulty": 7500,
-          "name": "CPU Mining",
+          "difficulty": 50,
+          "name": "Arduino/JS/Old computer mining",
           "varDiff": {
-            "minDiff": 1000,
+            "minDiff": 1,
             "maxDiff": null,
             "targetTime": 15,
             "retargetTime": 90,
             "variancePercent": 30
           }
         },
-        "3033": {
+        "20000": {
+          "listenAddress": "0.0.0.0",
+          "difficulty": 3000,
+          "name": "CPU Mining",
+          "varDiff": {
+            "minDiff": 1,
+            "maxDiff": null,
+            "targetTime": 15,
+            "retargetTime": 90,
+            "variancePercent": 30
+          }
+        },
+        "30000": {
           "listenAddress": "0.0.0.0",
           "difficulty": 25000,
           "name": "GPU Mining",
           "varDiff": {
-            "minDiff": 10000,
-            "maxDiff": null,
-            "targetTime": 15,
-            "retargetTime": 90,
-            "variancePercent": 30
-          }
-        },
-        "3034": {
-          "listenAddress": "0.0.0.0",
-          "difficulty": 200000,
-          "name": "High-End Multi GPU Mining",
-          "varDiff": {
-            "minDiff": 200000,
+            "minDiff": 1,
             "maxDiff": null,
             "targetTime": 15,
             "retargetTime": 120,
             "variancePercent": 30
           }
-        }
+        },
+        "40000": {
+          "listenAddress": "0.0.0.0",
+          "difficulty": 100000,
+          "name": "Small mining farm",
+          "varDiff": {
+            "minDiff": 1,
+            "maxDiff": null,
+            "targetTime": 15,
+            "retargetTime": 120,
+            "variancePercent": 30
+          }
       },
+           "50000": {
+          "listenAddress": "0.0.0.0",
+          "difficulty": 300000,
+          "name": "Mining farm",
+          "varDiff": {
+            "minDiff": 1,
+            "maxDiff": null,
+            "targetTime": 15,
+            "retargetTime": 120,
+            "variancePercent": 30
+          }
+      },
+                     "60000": {
+          "listenAddress": "0.0.0.0",
+          "difficulty": 1000000,
+          "name": "Big mining farm/ASIC/FPGA/anything else?",
+          "varDiff": {
+            "minDiff": 1,
+            "maxDiff": null,
+            "targetTime": 15,
+            "retargetTime": 120,
+            "variancePercent": 30
+          }
+      }
+    }
       "daemons": [
         {
           "host": "127.0.0.1",
